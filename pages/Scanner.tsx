@@ -81,7 +81,8 @@ export const Scanner: React.FC = () => {
     // 3. Connect Socket
     setTimeout(() => {
         setState(prev => ({ ...prev, status: 'scanning', scanId: mockScanId }));
-        connect(mockScanId);
+        // Pass the URL to the socket connection for simulation logic
+        connect(mockScanId, url);
     }, 1000);
   };
 

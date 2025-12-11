@@ -12,19 +12,25 @@ function App() {
 
   const renderView = () => {
     switch (currentView) {
-      case 'scanner': return <Scanner />;
-      case 'chat': return <AIChat />;
-      case 'image': return <ImageStudio />;
-      case 'video': return <VideoStudio />;
-      case 'live': return <LiveVoice />;
-      default: return <Scanner />;
+      case 'scanner':
+        return <Scanner />;
+      case 'chat':
+        return <AIChat />;
+      case 'image':
+        return <ImageStudio />;
+      case 'video':
+        return <VideoStudio />;
+      case 'live':
+        return <LiveVoice />;
+      default:
+        return <Scanner />;
     }
   };
 
   return (
-    <div className="flex h-screen bg-slate-950 text-slate-200 font-sans overflow-hidden">
+    <div className="h-screen bg-slate-950 text-slate-200 font-sans flex overflow-hidden">
       <Sidebar currentView={currentView} onNavigate={setCurrentView} />
-      <div className="flex-1 h-full overflow-auto relative">
+      <div className="flex-1 h-full overflow-auto relative bg-slate-950">
         {renderView()}
       </div>
     </div>
