@@ -1,0 +1,5 @@
+{
+  "name": "VPS Resource Scanner",
+  "description": "Real-time dashboard estimating VPS requirements based on website traffic and resource usage metrics.",
+  "requestFramePermissions": []
+}
